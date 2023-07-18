@@ -77,7 +77,7 @@ public class Register extends AppCompatActivity {
                     }
                 }
                 //如两次输入密码一致，则写入对应数据库
-                if(Pwd.equals(PwdAgain)&&Pwd.length()>0){
+                if(Pwd.equals(PwdAgain)&&Pwd.length()>0&&Account!=null){
                     if(Account.length()==10){
                         //写入用户信息表
                         userDb.execSQL("insert into users(userid,phone,name,couldborrowbooks,borrowing,account,password,remembered) values(?,?,?,?,?,?,?,0)",

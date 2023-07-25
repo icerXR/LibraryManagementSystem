@@ -1,6 +1,4 @@
-package com.example.librarymanagementsystem;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.librarymanagementsystem.LoginAndRegister;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,11 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.librarymanagementsystem.BaseActivity;
+import com.example.librarymanagementsystem.Manager.ManagerSQL;
+import com.example.librarymanagementsystem.R;
+import com.example.librarymanagementsystem.User.UserMySQL;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
-public class Register extends AppCompatActivity {
+public class Register extends BaseActivity {
     private Button btRegister;
     private Button btBack;
     private EditText etName;
@@ -27,8 +30,6 @@ public class Register extends AppCompatActivity {
     private ManagerSQL managerSQL;
     public SQLiteDatabase userDb;
     public SQLiteDatabase managerDb;
-    public int userid=1;
-    public int managerid=1;
     public String Account;
 
     @Override
@@ -80,14 +81,12 @@ public class Register extends AppCompatActivity {
                 if(Pwd.equals(PwdAgain)&&Pwd.length()>0&&Account!=null){
                     if(Account.length()==10){
                         //写入用户信息表
-                        userDb.execSQL("insert into users(userid,phone,name,couldborrowbooks,borrowing,account,password,remembered) values(?,?,?,?,?,?,?,0)",
-                                new String[]{Integer.toString(userid),Phone,Name,"3","0",Account,Pwd});
-                        userid+=1;
+                        userDb.execSQL("insert into users(phone,name,couldborrowbooks,borrowing,account,password,remembered) values(?,?,?,?,?,?,0)",
+                                new String[]{Phone,Name,"3","0",Account,Pwd});
                     }else{
                         //写入管理员信息表
-                        managerDb.execSQL("insert into manager(managerid,phone,name,account,password,remembered) values(?,?,?,?,?,0)",
-                                new String[]{Integer.toString(managerid),Phone,Name,Account,Pwd});
-                        managerid+=1;
+                        managerDb.execSQL("insert into manager(phone,name,account,password,registercode,remembered) values(?,?,?,?,?,0)",
+                                new String[]{Phone,Name,Account,Pwd,RegisterCode});
                     }
                     //启动新界面，通过Intent使得账号显示在下一界面中
                     Intent intent=new Intent(Register.this,RegisterComplete.class);

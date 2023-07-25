@@ -2,23 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginAndRegister.Login">
+    tools:context=".Manager.ManagerJobFix">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="××图书馆"
-            android:textSize="36sp" />
-    </LinearLayout>
-
+        android:text="\n\n\n"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,13 +18,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="账&#160;&#160;&#160;&#160;号："
+            android:text="姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名："
             android:textSize="20sp"
             android:layout_gravity="right|center_vertical"/>
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/etAccount"
+            android:id="@+id/etName"
             android:layout_weight="1" />
     </LinearLayout>
 
@@ -43,44 +35,56 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="密&#160;&#160;&#160;&#160;码："
+            android:text="手机号码："
             android:textSize="20sp"
             android:layout_gravity="right|center_vertical"/>
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/etPwd"
-            android:layout_weight="1"
-            android:inputType="textPassword"/>
+            android:id="@+id/etPhone"
+            android:layout_weight="1" />
     </LinearLayout>
-
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="记住密码"
-        android:id="@+id/cbRemember"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <Button
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="登录"
-            android:id="@+id/btLogin"
-            android:layout_weight="1"/>
-
-        <Button
-            android:layout_width="match_parent"
+            android:text="注册码："
+            android:textSize="20sp"
+            android:layout_gravity="right|center_vertical"/>
+        <EditText
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="注册"
-            android:id="@+id/btRegister"
-            android:layout_weight="1"/>
+            android:hint="请输入职务对应的注册码"
+            android:id="@+id/etRegisterCode"
+            android:layout_weight="1" />
     </LinearLayout>
-    <Button
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="退出"
-        android:id="@+id/btFinish" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btFirstManagerSummit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/btFirstManagerBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            app:layout_constraintLeft_toRightOf="@id/btFirstManagerSummit"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

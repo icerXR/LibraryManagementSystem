@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.BookUpdateActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:text="书名或图书编号"
+            >
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/InputBoxStyle"
+            >
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:background="@null"
+                style="@style/EditTextStyle"
+                android:id="@+id/book_update_search_et"
+                >
+
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 0++++++++++++++++++++++++++++++++++++++0 -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询"
+        android:id="@+id/book_update_search_Btn"
+        android:onClick="search_by_id_or_name"
+       >
+
+    </Button>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/book_info_update_lv">
+
+    </ListView>
+</LinearLayout>

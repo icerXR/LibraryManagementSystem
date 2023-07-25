@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LendAndBackActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:text="用户账号"
+            >
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/InputBoxStyle"
+            >
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:background="@null"
+                style="@style/EditTextStyle"
+                android:id="@+id/book_lend_account_et"
+                >
+
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 0++++++++++++++++++++++++++++++++++++++0 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:text="图书名称"
+            >
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/InputBoxStyle"
+            >
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:background="@null"
+                style="@style/EditTextStyle"
+                android:id="@+id/book_lend_book_name_et"
+                >
+
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 0++++++++++++++++++++++++++++++++++++++0 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:text="借出日期"
+            >
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/InputBoxStyle"
+            >
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:background="@null"
+                style="@style/EditTextStyle"
+                android:id="@+id/book_lend_date_et"
+                >
+
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 0++++++++++++++++++++++++++++++++++++++0 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:text="作者"
+            >
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/InputBoxStyle"
+            >
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:background="@null"
+                style="@style/EditTextStyle"
+                android:id="@+id/book_lend_author_et"
+                >
+
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 0++++++++++++++++++++++++++++++++++++++0 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:text="图书编号"
+            >
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/InputBoxStyle"
+            >
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:background="@null"
+                style="@style/EditTextStyle"
+                android:id="@+id/book_lend_id_et"
+                >
+
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 0++++++++++++++++++++++++++++++++++++++0 -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="借出"
+        android:id="@+id/book_lend_Btn"
+
+        >
+
+    </Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="归还"
+        android:id="@+id/book_back_Btn">
+
+    </Button>
+
+</LinearLayout>

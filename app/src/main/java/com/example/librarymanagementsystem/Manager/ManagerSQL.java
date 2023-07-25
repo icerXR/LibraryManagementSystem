@@ -1,4 +1,4 @@
-package com.example.librarymanagementsystem;
+package com.example.librarymanagementsystem.Manager;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -6,8 +6,8 @@ import android.widget.Toast;
 
 public class ManagerSQL extends SQLiteOpenHelper{
     private static String CREATE_TABLE_MANAGER="create table manager("+
-            "id integer primary key autoincrement,"+
-            "managerid text,phone text,name text,account text,password text,remembered integer)";
+            "managerid integer primary key autoincrement,"+
+            "phone text,name text,account text,password text,registercode text,remembered integer)";
     private Context sContext;
     public ManagerSQL(Context context,String name,SQLiteDatabase.CursorFactory factory,int version){
         super(context, name, factory, version);

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,13 +15,79 @@
         android:theme="@style/Theme.LibraryManagementSystem"
         tools:targetApi="31">
         <activity
-            android:name=".RegisterComplete"
+            android:name=".anotherAPP.AnotherApp"
+            android:exported="true" />
+        <activity
+            android:name=".lrj.overdue1"
+            android:exported="true" />
+        <activity
+            android:name=".app.ManagerListControl"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".Manager.ManagerJobFix"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".Manager.FirstManagerEmployeesManagement"
+            android:exported="false" />
+        <activity
+            android:name=".Manager.FirstManagerMainPlatform"
+            android:exported="false" />
+        <activity
+            android:name=".Manager.ManagerInfoFix"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserInfoFix"
+            android:exported="false" />
+        <activity
+            android:name=".Manager.ManagerInfoPlatform"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserInfoPlatform"
+            android:exported="false" />
+        <activity
+            android:name=".Manager.ManagerMainPlatform"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserMainPlatform"
+            android:exported="false" />
+        <activity
+            android:name=".LoginAndRegister.RegisterComplete"
+            android:exported="true" />
+        <activity
+            android:name=".LoginAndRegister.Register"
+            android:exported="false" />
+        <activity
+            android:name=".app.LendAndBackActivity"
+            android:exported="true" />
+        <activity
+            android:name=".app.BookNeededPostActivity"
+            android:exported="true" />
+        <activity
+            android:name=".app.BookDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.BookSearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".app.OrderManageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".app.OrderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".app.BookInfoUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".app.NewBookActivity"
+            android:exported="true" />
+        <activity
+            android:name=".app.BOOK_NEEDED"
+            android:exported="true" />
+        <activity
+            android:name=".app.BookUpdateActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginAndRegister.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

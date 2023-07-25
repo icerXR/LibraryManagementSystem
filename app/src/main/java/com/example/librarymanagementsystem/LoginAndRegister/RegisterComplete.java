@@ -1,6 +1,4 @@
-package com.example.librarymanagementsystem;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.librarymanagementsystem.LoginAndRegister;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class RegisterComplete extends AppCompatActivity {
+import com.example.librarymanagementsystem.BaseActivity;
+import com.example.librarymanagementsystem.R;
+
+public class RegisterComplete extends BaseActivity {
 
     private TextView tvRegisterComplete;
     private Button btGoToLogin;
@@ -26,7 +27,7 @@ public class RegisterComplete extends AppCompatActivity {
         btGoToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1=new Intent(RegisterComplete.this,Login.class);
+                Intent intent1=new Intent(RegisterComplete.this, Login.class);
                 intent1.putExtra("account1",account);
                 startActivity(intent1);
             }

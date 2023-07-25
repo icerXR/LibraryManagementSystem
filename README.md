@@ -1,0 +1,4 @@
+# LibraryManagementSystem
+使用Android设计开发图书馆管理app
+
+一份中规中矩的课程实践作业，使用本地SQLite模拟数据流通，实现了登录注册，信息修改，图书借还等功能
